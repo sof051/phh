@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @param mixed $query requete SQL
+ * 
+ * @return [Array] tableau de lignes de réponses
+ */
 function selectTable($query)
 {
     // Etaoe 1 - Connexion à la base de données
@@ -25,9 +29,9 @@ function selectTable($query)
         array_push($returnArray,$row);
     };
     return $returnArray;
-
 }
-$monResultat=selectTable("SELECT * FROM produits;");
-print_r($monResultat);
+
+//$monResultat=selectTable("SELECT idcat, titre FROM categories;");
+//print_r($monResultat);
 
 ?>
